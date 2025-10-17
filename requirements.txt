@@ -1,2 +1,3 @@
-rasa
-rasa-sdk
+# Rasa chatbot dependencies
+rasa==3.6.10
+rasa-sdk==3.6.10

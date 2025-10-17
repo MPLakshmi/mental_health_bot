@@ -6,23 +6,27 @@ services:
     buildCommand: |
       pip install -r requirements.txt
     startCommand: |
-      rasa run --enable-api --cors "*" --port 10000
+      nohup rasa run --enable-api --cors "*" --port 10000 &
+      python health_rasa.py
     envVars:
       - key: RASA_TOKEN
         value: "your_secure_token_here"
       - key: ACTION_SERVER_URL
         value: "http://action-server:5055/webhook"
     healthCheckPath: "/health"
+    port: 10000
 
   - type: web
     name: action-server
     env: python
     plan: free
     buildCommand: |
-      pip install rasa-sdk
+      pip install rasa-sdk flask
     startCommand: |
-      rasa run actions --port 5055
+      nohup rasa run actions --port 5055 &
+      python health_actions.py
     envVars:
       - key: ACTION_SECRET
         value: "your_action_secret_here"
     healthCheckPath: "/health"
+    port: 5055
