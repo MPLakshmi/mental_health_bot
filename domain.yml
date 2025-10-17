@@ -1,0 +1,28 @@
+version: "3.1"
+
+intents:
+  - greet
+  - mood_unhappy
+  - mood_happy
+  - ask_resources
+  - goodbye
+  - thanks
+
+responses:
+  utter_greet:
+    - text: "Hello! I’m here to listen. How are you feeling today?"
+  
+  utter_cheer_up:
+    - text: "I'm sorry to hear that. Remember, it's okay to not be okay sometimes. Would you like some resources that might help?"
+
+  utter_happy:
+    - text: "That’s great to hear! Keep taking care of yourself."
+
+  utter_goodbye:
+    - text: "Take care! Remember, your feelings are valid and you are not alone."
+  
+  utter_thanks:
+    - text: "You're very welcome. I'm always here if you need to talk again."
+
+  utter_provide_resources:
+    - text: "Here are some helpful resources:\n- 🧘‍♀️ Calm app: https://www.calm.com\n- 💬 7 Cups: https://www.7cups.com\n- 📞 Helpline: 1800-599-0019 (India)"

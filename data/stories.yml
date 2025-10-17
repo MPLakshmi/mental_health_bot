@@ -1,0 +1,24 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_happy
+    - action: utter_happy
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: sad path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - intent: ask_resources
+    - action: utter_provide_resources
+    - intent: thanks
+    - action: utter_thanks
+    - intent: goodbye
+    - action: utter_goodbye

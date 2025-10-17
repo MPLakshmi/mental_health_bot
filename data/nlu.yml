@@ -1,0 +1,46 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+
+- intent: mood_unhappy
+  examples: |
+    - I am sad
+    - I feel stressed
+    - I am depressed
+    - not feeling good
+    - I'm anxious
+    - I feel low
+
+- intent: mood_happy
+  examples: |
+    - I am happy
+    - feeling great
+    - I’m doing good
+    - feeling awesome
+
+- intent: ask_resources
+  examples: |
+    - Can you share some resources?
+    - I need help
+    - I want to talk to someone
+    - What can I do to feel better?
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - talk to you soon
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thanks
+    - appreciate it
