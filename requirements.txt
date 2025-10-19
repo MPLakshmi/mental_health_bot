@@ -1,6 +1,9 @@
-# Core dependencies
-rasa==3.5.10
-rasa-sdk==3.5.1
+# Python Version Requirement
+python_version >= "3.9" and python_version <= "3.11"
+
+# Core Rasa Framework
+rasa==3.6.20
+rasa-sdk==3.6.2
 
 # Supporting NLP libraries
 spacy==3.5.3
