@@ -7,6 +7,7 @@ intents:
   - ask_resources
   - goodbye
   - thanks
+  - suicidal_thoughts
 
 responses:
   utter_greet:
@@ -23,6 +24,16 @@ responses:
   
   utter_thanks:
     - text: "You're very welcome. I'm always here if you need to talk again."
+
+  utter_suicidal_thoughts:
+    - text: |
+        I’m really sorry you’re feeling like this right now. 💛  
+        You don’t have to face this alone — help is available and you deserve care and support.  
+        If you’re in immediate danger, please reach out for help right now:
+        - 🇮🇳 **AASRA Helpline:** 91-9820466726  
+        - 🇮🇳 **Vandrevala Foundation Helpline:** 9999 666 555  
+        - 🌍 **If outside India**, visit [findahelpline.com], which lists international helplines.  
+        Would you like me to connect you to more mental health resources or coping strategies?
 
   utter_provide_resources:
     - text: "Here are some helpful resources:\n- 🧘‍♀️ Calm app: https://www.calm.com\n- 💬 7 Cups: https://www.7cups.com\n- 📞 Helpline: 1800-599-0019 (India)"

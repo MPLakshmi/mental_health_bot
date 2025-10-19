@@ -22,3 +22,5 @@ stories:
     - action: utter_thanks
     - intent: goodbye
     - action: utter_goodbye
+    - intent: suicidal_thoughts
+    - action: utter_suicidal_thoughts

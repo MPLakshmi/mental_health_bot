@@ -39,6 +39,19 @@ nlu:
     - see you later
     - talk to you soon
 
+
+
+- intent: suicidal_thoughts
+  examples: |
+    - I don’t want to live anymore
+    - I’m thinking of ending my life
+    - I feel like killing myself
+    - There’s no point in living
+    - I wish I could disappear
+    - I want to die
+    - I can’t handle this pain anymore
+    - I feel hopeless and worthless
+    
 - intent: thanks
   examples: |
     - thank you

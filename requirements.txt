@@ -1,3 +1,32 @@
-# Rasa chatbot dependencies
-rasa==3.6.10
-rasa-sdk==3.6.10
+# Core dependencies
+rasa==3.5.10
+rasa-sdk==3.5.1
+
+# Supporting NLP libraries
+spacy==3.5.3
+sklearn-crfsuite==0.3.6
+scikit-learn==1.2.2
+pandas==1.5.3
+numpy==1.23.5
+
+# Transformers (for pre-trained language models)
+transformers==4.28.1
+
+# Web and API support
+requests==2.31.0
+flask==2.3.2
+
+# Development utilities
+tqdm==4.65.0
+colorama==0.4.6
+
+# Optional: if using PostgreSQL or MySQL trackers
+SQLAlchemy==1.4.46
+psycopg2-binary==2.9.6  # PostgreSQL
+# mysqlclient==2.1.1     # Uncomment if using MySQL
+
+# Optional: if using TensorFlow-based pipelines
+tensorflow==2.11.0
+
+# For running on Render / Railway or cloud
+gunicorn==20.1.0
