@@ -2,30 +2,16 @@ services:
   - type: web
     name: rasa-chatbot
     env: python
-    pythonVersion: "3.10.12"   
+    pythonVersion: "3.11.9"
     plan: free
+
     buildCommand: |
+      pip install --upgrade pip
       pip install -r requirements.txt
+
     startCommand: |
-      nohup rasa run --enable-api --cors "*" --port $PORT &
-      python health_rasa.py
+      rasa run --enable-api --cors "*" --port $PORT
+
     envVars:
       - key: RASA_TOKEN
         value: "your_secure_token_here"
-      - key: ACTION_SERVER_URL
-        value: "http://action-server:5055/webhook"
-    healthCheckPath: "/health"
-
-  - type: web
-    name: action-server
-    env: python
-    plan: free
-    buildCommand: |
-      pip install rasa-sdk flask
-    startCommand: |
-      nohup rasa run actions --port $PORT &
-      python health_actions.py
-    envVars:
-      - key: ACTION_SECRET
-        value: "your_action_secret_here"
-    healthCheckPath: "/health"
